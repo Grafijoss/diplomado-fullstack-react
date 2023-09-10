@@ -1,0 +1,11 @@
+.login-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, purple, rgb(39, 147, 206)) ;
+}
+
+.row-section{
+    justify-content: center;
+}
