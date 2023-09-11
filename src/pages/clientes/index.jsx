@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ClientesScreen = () => {
 
+  const navigate = useNavigate()
   const [ clients, setClients ] = useState([])
 
 
@@ -44,7 +46,12 @@ const ClientesScreen = () => {
         ))}
       </div>
 
-      
+      <button type="button" 
+        className="btn btn-primary btn-lg btn-block"
+        onClick={() => navigate('/clientes/nuevo')}
+      >
+        Nuevo cliente
+      </button>
     </>
   )
 }
