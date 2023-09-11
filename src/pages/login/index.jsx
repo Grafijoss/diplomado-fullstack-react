@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {Container, Row, Col,Card} from 'react-bootstrap'
 
-import { setTokenAction } from '../../redux/slices/authSlice';
+import { setTokenAction, setIsAuthAction, setEmailAction } from '../../redux/slices/authSlice';
 
 import './login.css'
 
@@ -14,8 +14,14 @@ const LoginScreen = () => {
     const navigate = useNavigate()
 
     const handleLogin = () => {
-        let token = 'kjhkjhkjh'
+        const token = 'kjhkjhkjh'
+        const isAuth = true
+        const email = 'amantedelacomida53@aol.com'
+
+
         dispatch(setTokenAction(token))
+        dispatch(setIsAuthAction(isAuth))
+        dispatch(setEmailAction(email))
 
         navigate('/dashboard')
     }

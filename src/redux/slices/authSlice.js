@@ -8,14 +8,26 @@ const authSlice = createSlice({
         email: null
     },
     reducers: {
-        setTokenAction: (state, action) => { // reciben dos argumentos
+        setTokenAction: (state, action) => {
             return {
                 ...state,
                 token: action.payload
+            }
+        },
+        setIsAuthAction: (state, action) => {
+            return {
+                ...state,
+                isAuth: action.payload
+            }
+        },
+        setEmailAction: (state, action) => {
+            return {
+                ...state,
+                email: action.payload
             }
         }
     }
 })
 
-export const { setTokenAction } = authSlice.actions
+export const { setTokenAction, setIsAuthAction, setEmailAction } = authSlice.actions
 export default authSlice.reducer
